@@ -2,7 +2,7 @@ if [ -z $TORRENT_TIMEOUT ]
 then
    TORRENT_TIMEOUT=0
 fi
-tracker_list=$(curl -Ns https://raw.githubusercontent.com/XIU2/TrackersListCollection/master/all.txt https://ngosang.github.io/trackerslist/trackers_all_http.txt https://newtrackon.com/api/all https://raw.githubusercontent.com/hezhijie0327/Trackerslist/main/trackerslist_tracker.txt | awk '$0' | tr '\n\n' ',')
+tracker_list=$(curl -Ns https://cdn.jsdelivr.net/gh/ngosang/trackerslist@master/trackers_best.txt https://cdn.staticaly.com/gh/XIU2/TrackersListCollection/master/best.txt https://cdn.staticaly.com/gh/XIU2/TrackersListCollection/master/all.txt https://cdn.staticaly.com/gh/XIU2/TrackersListCollection/master/http.txt https://fastly.jsdelivr.net/gh/XIU2/TrackersListCollection/all.txt https://cdn.jsdelivr.net/gh/XIU2/TrackersListCollection/all.txt https://raw.githubusercontent.com/XIU2/TrackersListCollection/master/all.txt https://ngosang.github.io/trackerslist/trackers_all_http.txt https://newtrackon.com/api/all https://raw.githubusercontent.com/hezhijie0327/Trackerslist/main/trackerslist_tracker.txt | awk '$1' | tr '\n\n' ',')
 aria2c --allow-overwrite=true --auto-file-renaming=true --bt-enable-lpd=true --bt-detach-seed-only=true \
        --bt-remove-unselected-file=true --bt-stop-timeout=$TORRENT_TIMEOUT --bt-tracker="[$tracker_list]" \
        --check-certificate=false --check-integrity=true --continue=true --content-disposition-default-utf8=true \
