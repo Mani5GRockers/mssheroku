@@ -53,12 +53,16 @@ def start(update, context):
     reply_markup = buttons.build_menu(2)
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
         start_string = f'''
-This bot can mirror all your links to Google Drive or to telegram!
-Type /{BotCommands.HelpCommand} to get a list of available commands
+★ This bot can mirror all your links to Drive!
+👲 Modded By: @Mani5GRockers
+★ Type /{BotCommands.HelpCommand} to get a list of available commands
 '''
+        if update.message.chat.type == "private" :
+            sendMessage(f"👤 Hey I'm AWS MIRROR BOT 👤\n\n➩ JOIN GROUP List 🏆 \n\n ✅ JOIN AWS MIRROR ZONE ✅ \n\n ✥════ @awsmirrorzone ════✥ \n\n ✅ AWS MIRROR ZONE Discussion ✅ \n\n ✥════ @aws_public_chat ════✥ \n\n👩‍⚕ Bot Developer by 👨‍⚕️   👇\n\n✥════ @Mani5GRockers ════✥ \n\n /help - How To use This Group", context.bot, update)
+        else :
         sendMarkup(start_string, context.bot, update.message, reply_markup)
     else:
-        sendMarkup('Not an Authorized user, deploy your own mirror-leech bot', context.bot, update.message, reply_markup)
+        sendMarkup('🔒 Oops! not a Authorized user.\n🔐 Please contact Bot developer 👉 <b>@Mani5GRockers</b>.', context.bot, update.message, reply_markup)
 
 def restart(update, context):
     restart_message = sendMessage("Restarting...", context.bot, update.message)
