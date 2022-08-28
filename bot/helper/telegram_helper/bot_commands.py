@@ -7,7 +7,7 @@ class _BotCommands:
         self.MirrorCommand = (f'mirror{CMD_INDEX}', f'm{CMD_INDEX}')
         self.UnzipMirrorCommand = (f'unzipmirror{CMD_INDEX}', f'uzm{CMD_INDEX}')
         self.ZipMirrorCommand = (f'zipmirror{CMD_INDEX}', f'zm{CMD_INDEX}')
-        self.QbMirrorCommand = (f'qbmirror{CMD_INDEX}', f'qm{CMD_INDEX}')
+        self.QbMirrorCommand = (f'qb{CMD_INDEX}', f'qm{CMD_INDEX}')
         self.QbUnzipMirrorCommand = (f'qbunzipmirror{CMD_INDEX}', f'quzm{CMD_INDEX}')
         self.QbZipMirrorCommand = (f'qbzipmirror{CMD_INDEX}', f'qzm{CMD_INDEX}')
         self.YtdlCommand = (f'ytdl{CMD_INDEX}', f'y{CMD_INDEX}')
