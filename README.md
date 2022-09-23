@@ -224,6 +224,10 @@ sudo pip install pyrogram
 pip install telegraph
 sudo python3 -m pip install --upgrade pip
 sudo apt install nodejs
+
+curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
 sudo apt install git
 sudo pip3 install docker-compose
 sudo apt install npm                   #Downloading...
